@@ -286,6 +286,10 @@ ul {
 
 .service-card img {
   width: 20px;
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 20px;
   object-fit: cover;
 }
 
@@ -302,6 +306,7 @@ ul {
   width: 100%;
   max-width: 500px;
   border-radius: 10px;
+  transform: scale(1.5);
 }
 .content {
   padding-left: 30px;
@@ -352,69 +357,7 @@ ul {
 
 /* Swipper */
 
-.slider-container {
-    width: 80%;
-    margin: 3rem auto;
-    position: relative;
-    padding: 40px 0; 
-}
 
-.swiper {
-    width: 100%;
-    height: 900px;
-}
-
-.swiper-slide {
-  width: 100%;
-  height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.swiper-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-
-
-/* Pagination (Dots) */
-.swiper-pagination {
-    position: absolute;
-    bottom: -30px; /* Moves dots outside */
-}
-
-.lightbox {
-  display: none;  /* Hidden by default */
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  justify-content: center;
-  align-items: center;
-}
-
-.lightbox-content {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 10px;
-}
-
-.close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 40px;
-  color: white;
-  cursor: pointer;
-}
 
 
 /* DESIGN */
@@ -504,7 +447,7 @@ ul {
 .payment-option p {
   font-size: 18px;
   color: #a52a2a;
-  
+
 }
 
 .green-text {
@@ -626,7 +569,7 @@ footer {
     padding: 40px 0;
     margin-top: 4rem;
   }
-  
+
   .footer-container {
     max-width: 800px;
     margin: auto;
@@ -634,14 +577,14 @@ footer {
     justify-content: space-between;
     flex-wrap: wrap;
   }
-  
+
   .footer-section {
     min-width: fit-content;
     display: flex;
     flex-direction: column;
     gap: 1rem;
   }
-  
+
   .footer-section h3 {
     font-size: 20px;
     margin-bottom: 10px;
@@ -649,7 +592,7 @@ footer {
     padding-bottom: 5px;
     width: fit-content;
   }
-  
+
   .footer-section p{
     color: #fff;
     display: flex;
@@ -657,24 +600,24 @@ footer {
     gap: 1rem;
   }
 
-  
+
   /* Social Media Icons */
   .social-icons {
     display: flex;
     gap: 10px;
     margin-top: 10px;
   }
-  
+
   .social-icons a {
     color: #fff;
     font-size: 24px;
     transition: color 0.3s;
   }
-  
+
   .social-icons a:hover {
     color: white;
   }
-  
+
   /* Copyright Section */
   .footer-bottom {
     text-align: center;
@@ -722,7 +665,7 @@ footer {
   color: #fff;
   margin-top: 3rem;
 }
-  
+
 .brian a {
   color: #fff;
   text-decoration: underline;
@@ -811,8 +754,8 @@ footer {
     .contact_container {
       width: 80%;
     }
-    
-    
+
+
   }
 
   @media  only screen and (max-width: 800px){
@@ -825,7 +768,7 @@ footer {
     .menu_open, .menu_close {
       right: 2rem;
     }
-   
+
     .logo h1 {
       font-size: 14px;
       margin-left: 2rem;
@@ -893,9 +836,11 @@ footer {
     }
 
     .about img {
-      width: 100vw;
-      padding: 0;
-      margin: 0;
+      width: 100%;
+      height: auto;
+      size: 10px;
+      padding: 1.5rem;
+      margin: 1.5rem;
     }
 
     .clientele_container {
@@ -980,5 +925,3 @@ footer {
     .footer-bottom {
       font-size: 12px;
     }
-
-  }
