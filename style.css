@@ -46,7 +46,6 @@ ul {
   font-size: 32px;
   font-weight: 900;
   color: #f00;;
-  color: #f00;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -72,7 +71,6 @@ ul {
 
 .green {
   background-color: #589b6b;
- 
   color: #fff;
   padding: 0 5px;
   border-radius: 5px;
@@ -92,7 +90,6 @@ ul {
 
 .menu ul li a:hover {
   color: #589b6b;
-
   transition: color 0.3s;
 }
 
@@ -104,14 +101,10 @@ ul {
   width: 100%;
   height: 2px;
   background-color: #589b6b;
-
   transition: transform 0.3s;
 } 
-}
 
 .menu_open, .menu_close {
-.menu_open,
-.menu_close {
   position: absolute;
   right: 8rem;
   top: inherit;
@@ -143,13 +136,11 @@ ul {
 
 .nav_btns a:hover:first-child {
   color: #6bc07d;
-
   transition: background-color 0.3s;
 }
 
 .nav_btns a:last-child {
   background-color: #589b6b;
- 
   color: #fff;
 }
 
@@ -191,7 +182,6 @@ ul {
 .hero_left a {
   padding: 10px 20px;
   background-color: #6bc07d;
- 
   color: #fff;
   border-radius: 5px;
   text-decoration: none;
@@ -202,12 +192,10 @@ ul {
 
 .hero_left a:hover {
   background-color: #589b6b;
-  
   transition: background-color 0.3s;
 }
 
 .hero_right{
-.hero_right {
   width: 50%;
   display: flex;
   justify-content: center;
@@ -234,7 +222,6 @@ ul {
   font-size: 36px;
   font-weight: 900;
   color: #589b6b;
-  
 }
 
 .title p {
@@ -249,16 +236,11 @@ ul {
   justify-content: center;
   align-items: center;
 }
-
 .vision-values {
     display: flex;
     width: 80%;
     margin: 3rem auto;
     flex-wrap: wrap;
-  display: flex;
-  width: 80%;
-  margin: 3rem auto;
-  flex-wrap: wrap;
 }
 
 .vision-values h3 {
@@ -267,11 +249,6 @@ ul {
     font-weight: bold;
     color: #222;
     margin-bottom: 10px;
-  flex: 1;
-  font-size: 3rem;
-  font-weight: bold;
-  color: #222;
-  margin-bottom: 10px;
 }
 
 .vision-values p {
@@ -279,10 +256,6 @@ ul {
     font-size: 20px;
     color: #000;
     line-height: 1.6;
-  flex: 1;
-  font-size: 20px;
-  color: #000;
-  line-height: 1.6;
 }
 
 
@@ -308,12 +281,16 @@ ul {
   width: 350px;
   gap: 1rem;
   border: 1px solid #589b6b;
- 
   padding: 1rem;
 }
 
 .service-card img {
   width: 20px;
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 20px;
+ 
   object-fit: cover;
 }
 
@@ -326,14 +303,12 @@ ul {
   gap: 2rem;
   margin: auto;
 }
-
 .about img {
   width: 100%;
   max-width: 500px;
   border-radius: 10px;
   transform: scale(1.5);
 }
-
 .content {
   padding-left: 30px;
   max-width: 500px;
@@ -342,29 +317,24 @@ ul {
   gap: 1rem;
   padding: 2rem;
 }
-
 .content h2 {
   font-size: 28px;
   font-weight: bold;
 }
-
 .content p {
   font-size: 18px;
   line-height: 2;
 }
-
 .content ul {
   list-style: none;
   padding: 0;
 }
-
 .content ul li {
   font-size: 16px;
   margin: 10px 0;
   display: flex;
   align-items: center;
 }
-
 .content ul li::before {
   content: "\2714";
   color: red;
@@ -380,16 +350,10 @@ ul {
     gap: 4rem;
     margin: 4rem 0;
     padding: 2rem;
-  display: flex;
-  justify-content: center;
-  gap: 4rem;
-  margin: 4rem 0;
-  padding: 2rem;
 }
 
 .clientele_container img {
     width: 6rem;
-  width: 6rem;
 }
 
 /* Swipper */
@@ -455,7 +419,6 @@ ul {
 }
 
 .payment-options{
-.payment-options {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -490,7 +453,6 @@ ul {
 
 .green-text {
   color: #589b6b;
-  
 }
 
 /* Testimonials */
@@ -964,4 +926,3 @@ footer {
     .footer-bottom {
       font-size: 12px;
     }
-
