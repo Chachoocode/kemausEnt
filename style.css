@@ -264,7 +264,7 @@ ul {
   transform: scale(1.1); /* Slight zoom on hover for engagement */
 }
 
-.service-card h3 {
+.service-card h15 {
   font-size: 1.5rem;
   font-weight: bold;
   color: #222;
@@ -974,4 +974,5 @@ footer {
       height: 80px;
     }
   }
+
 
