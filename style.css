@@ -218,6 +218,8 @@ ul {
     line-height: 1.6;
 }
 /* Services */
+/* Services Section – Clean CSS Grid Layout (No Flexbox) */
+
 .services {
   text-align: center;
 }
@@ -225,26 +227,26 @@ ul {
 .services-container {
   margin: 5rem auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Ensures exactly 3 columns on desktop */
-  gap: 40px; /* Slightly increased gap for better spacing */
+  grid-template-columns: repeat(3, 1fr); /* Perfect 3 columns on desktop */
+  gap: 40px;                             /* Nice breathing room */
   max-width: 1400px;
-  padding: 0 40px; /* More breathing room on sides */
-  align-items: start; /* Aligns cards at the top for consistent appearance */
+  padding: 0 40px;
+  align-items: start;                   /* All cards align at the top */
 }
 
 .service-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start; /* Starts content from the top */
+  justify-content: flex-start;          /* Content starts from top */
   width: 100%;
-  min-height: 400px; /* Increased min-height to accommodate larger images and better alignment */
-  gap: 2rem; /* More space between image and text */
+  min-height: 420px;                    /* Slightly taller for balance */
+  gap: 2rem;
   border: 1px solid #589b6b;
-  padding: 3rem 1.5rem; /* More internal padding for a spacious feel */
+  padding: 3rem 1.5rem;
   border-radius: 8px;
   transition: transform 0.3s, box-shadow 0.3s;
-  background-color: #fff; /* Ensures consistent background */
+  background-color: #fff;
 }
 
 .service-card:hover {
@@ -252,22 +254,23 @@ ul {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Significantly larger images on desktop */
+/* Large, impactful images on desktop */
 .service-card img {
-  width: 180px;     /* Much larger for better visual impact */
+  width: 180px;
   height: 180px;
   object-fit: contain;
   transition: transform 0.3s;
 }
 
 .service-card:hover img {
-  transform: scale(1.1); /* Slight zoom on hover for engagement */
+  transform: scale(1.1);
 }
 
-.service-card h15 {
+.service-card h3 {
   font-size: 1.5rem;
   font-weight: bold;
   color: #222;
+  margin: 0;
 }
 
 .service-card p {
@@ -275,40 +278,32 @@ ul {
   line-height: 1.6;
   color: #444;
   padding: 0 1rem;
+  text-align: center;
 }
 
-/* Ensure consistent card heights aren't forced – content dictates height, but alignment is top-based */
-/* If you want perfectly equal height cards, uncomment the below */
-/*
-.service-card {
-  justify-content: space-between;
-}
-*/
-
-/* Existing media queries – updated for larger images on larger screens only */
-
+/* Responsive breakpoints */
 @media only screen and (max-width: 1200px) {
   .services-container {
-    grid-template-columns: repeat(3, 1fr); /* Keep 3 columns as long as possible */
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     padding: 0 30px;
   }
 
   .service-card {
-    min-height: 350px;
+    min-height: 380px;
     padding: 2.5rem 1rem;
-    gap: 1.5rem;
+    gap: 1.8rem;
   }
 
   .service-card img {
-    width: 140px;
-    height: 140px;
+    width: 150px;
+    height: 150px;
   }
 }
 
 @media only screen and (max-width: 1000px) {
   .services-container {
-    grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns earlier if needed */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -321,22 +316,26 @@ ul {
 
   .service-card {
     min-height: auto;
-    padding: 2rem 1rem;
-    gap: 1.5rem;
+    padding: 2.5rem 1.5rem;
+    gap: 1.8rem;
   }
 
+  .service-card img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
   .service-card img {
     width: 100px;
     height: 100px;
   }
-}
 
-/* Extra small screens */
-@media only screen and (max-width: 480px) {
-  .service-card img {
-    width: 80px;
-    height: 80px;
+  .service-card {
+    padding: 2rem 1rem;
   }
+}
 
 }
 
@@ -974,5 +973,6 @@ footer {
       height: 80px;
     }
   }
+
 
 
