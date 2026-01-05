@@ -225,24 +225,26 @@ ul {
 .services-container {
   margin: 5rem auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns on large screens */
-  gap: 30px;
+  grid-template-columns: repeat(3, 1fr); /* Ensures exactly 3 columns on desktop */
+  gap: 40px; /* Slightly increased gap for better spacing */
   max-width: 1400px;
-  padding: 0 20px;
+  padding: 0 40px; /* More breathing room on sides */
+  align-items: start; /* Aligns cards at the top for consistent appearance */
 }
 
 .service-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: flex-start; /* Starts content from the top */
   width: 100%;
-  min-height: 300px;
-  gap: 1.5rem;
+  min-height: 400px; /* Increased min-height to accommodate larger images and better alignment */
+  gap: 2rem; /* More space between image and text */
   border: 1px solid #589b6b;
-  padding: 2rem 1rem;
+  padding: 3rem 1.5rem; /* More internal padding for a spacious feel */
   border-radius: 8px;
   transition: transform 0.3s, box-shadow 0.3s;
+  background-color: #fff; /* Ensures consistent background */
 }
 
 .service-card:hover {
@@ -250,10 +252,92 @@ ul {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* Significantly larger images on desktop */
 .service-card img {
-  width: 120px;     /* Made significantly bigger */
-  height: 120px;    /* Made significantly bigger */
+  width: 180px;     /* Much larger for better visual impact */
+  height: 180px;
   object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.service-card:hover img {
+  transform: scale(1.1); /* Slight zoom on hover for engagement */
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #222;
+}
+
+.service-card p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+  padding: 0 1rem;
+}
+
+/* Ensure consistent card heights aren't forced – content dictates height, but alignment is top-based */
+/* If you want perfectly equal height cards, uncomment the below */
+/*
+.service-card {
+  justify-content: space-between;
+}
+*/
+
+/* Existing media queries – updated for larger images on larger screens only */
+
+@media only screen and (max-width: 1200px) {
+  .services-container {
+    grid-template-columns: repeat(3, 1fr); /* Keep 3 columns as long as possible */
+    gap: 30px;
+    padding: 0 30px;
+  }
+
+  .service-card {
+    min-height: 350px;
+    padding: 2.5rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .service-card img {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .services-container {
+    grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns earlier if needed */
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .services-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0 20px;
+  }
+
+  .service-card {
+    min-height: auto;
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .service-card img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Extra small screens */
+@media only screen and (max-width: 480px) {
+  .service-card img {
+    width: 80px;
+    height: 80px;
+  }
+
 }
 
 .about {
@@ -890,3 +974,4 @@ footer {
       height: 80px;
     }
   }
+
